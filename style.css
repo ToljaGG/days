@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #45b3e1;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+#dayCount {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color: white;
+    margin-top: 35%;
+    font-size: 50px;
+}
+
+#day {
+    border: 0;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(232, 182, 44);
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 0 100px 30px #e7c64e;
+}
+
+#day:hover {
+    width: 115px;
+    height: 115px;
+    transition: 0.1s;
+}
+
+#night {
+    border: 0;
+    background-color: #e1c294;
+    width: 70px;
+    height: 70px;
+    transition: 0.3s;
+    border-radius: 50%;
+    box-shadow: 0 0 50px 10px #e1c294;
+}
+
+#night:hover {
+    width: 95px;
+    height: 95px;
+    transition: 0.1s;
+}
+
+#bloodNight {
+    border: 0;
+    background-color: #e03232;
+    width: 70px;
+    height: 70px;
+    transition: 0.3s;
+    border-radius: 50%;
+    box-shadow: 0 0 50px 10px #e32f2f;
+}
+
+#bloodNight:hover {
+    width: 95px;
+    height: 95px;
+    transition: 0.1s;
+}
+
+#animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+}
+
+@keyframes sunRiseAnimation {
+    0% {
+        left: -20%;
+        bottom: -100px;
+        transform: scale(0.5);
+    }
+    50% {
+        left: 50%;
+        bottom: 50%;
+        transform: translateX(-50%) scale(1);
+    }
+    100% {
+        left: 50%;
+        bottom: 70%;
+        transform: translateX(-50%) scale(2);
+    }
+}
+
+@keyframes sunSetAnimation {
+    0% {
+        left: 50%;
+        bottom: 70%;
+        transform: translateX(-50%) scale(2);
+    }
+    50% {
+        left: 50%;
+        bottom: 50%;
+        transform: translateX(-50%) scale(1);
+    }
+    100% {
+        left: 120%;
+        bottom: -100px;
+        transform: scale(0.5);
+    }
+}
