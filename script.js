@@ -23,11 +23,11 @@ function changeTimeButton() {
 
 function changeTime(id, backgroundColor) {
     animation.style.animation = "sunSetAnimation 3s ease-in-out forwards";
+    buttonDisable()
     animation.addEventListener("animationend", () => {
         changeButton(id);
         background.style.background = backgroundColor;
         animation.style.animation = "sunRiseAnimation 3s ease-in-out forwards";
-        buttonDisable()
     }, {once: true});
 }
 
@@ -44,7 +44,7 @@ function buttonDisable() {
     button.disabled = true;
     setTimeout(() => {
         button.disabled = false;
-    }, 3000)
+    }, 6000)
 }
 
 function changeDayCount() {
