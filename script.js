@@ -6,7 +6,7 @@ let dayCountText = document.getElementById('dayCount');
 let day = 1;
 
 animation.style.animation = "sunRiseAnimation 3s ease-in-out forwards"
-buttonDisable();
+buttonDisable(3000);
 
 function changeTimeButton() {
     if (boolTime) {
@@ -23,7 +23,7 @@ function changeTimeButton() {
 
 function changeTime(id, backgroundColor) {
     animation.style.animation = "sunSetAnimation 3s ease-in-out forwards";
-    buttonDisable()
+    buttonDisable(6000)
     animation.addEventListener("animationend", () => {
         changeButton(id);
         background.style.background = backgroundColor;
@@ -40,11 +40,11 @@ function changeButton(id) {
     }, 100);
 }
 
-function buttonDisable() {
+function buttonDisable(ms) {
     button.disabled = true;
     setTimeout(() => {
         button.disabled = false;
-    }, 6000)
+    }, ms)
 }
 
 function changeDayCount() {
